@@ -14,7 +14,8 @@ export default function EpubReader({ url }) {
   };
 
   const prevPage = () => {
-    if (rendition) {rendition.prev()
+    if (rendition) {
+      rendition.prev()
       setPage((prev)=>prev-1)
     };
   };

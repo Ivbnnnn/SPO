@@ -1,15 +1,12 @@
-import React from 'react'
-import ContinueCard from '../components/ContinueCard.jsx'
-import Card from '../components/Card.jsx'
-import Note from '../components/Note.jsx'
-import itemsContinue from "../components/continueItems.json"
 
-import Header from '../components/Header.jsx'
-import NavAside from '../components/NavAside.jsx'
+import libraryItems from "../components/libraryItems.json"
+
+import Header from '../components/mainComps/Header.jsx'
+import NavAside from '../components/mainComps/NavAside.jsx'
 import { Link } from 'react-router-dom'
-import LibraryBook from '../components/LibraryBook.jsx'
+import LibraryBook from '../components/libraryComps/LibraryBook.jsx'
 export default function MainView() {
-    const items = Object.entries(itemsContinue)
+    const items = Object.entries(libraryItems)
   return (
     <>
     <Header/>
@@ -49,7 +46,7 @@ export default function MainView() {
                         <option value="genre">Жанру</option>
                     </select>
                 </div>
-                <div>
+                <div className="grid grid-cols-4 gap-10">
                     {items.map(([key, values]) => (
                                     <LibraryBook key={key} {...values}/>
                     ))}

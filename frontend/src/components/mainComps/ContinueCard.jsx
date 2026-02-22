@@ -1,10 +1,10 @@
 import React from 'react'
-import Progressbar from './Progressbar'
+import Progressbar from '../UI/Progressbar'
 export default function ContinueCard({src, name, author, progress, chapter, chapter_max, page}) {
   return (
     <div className='flex rounded-2xl bg-beige-2 p-4'>
-        <img src="" alt="" />
-        <div className='w-full'>
+        <img src={src} alt="" className='max-w-[10vw] rounded-2xl m-2'/>
+        <div className='w-full m-2 mt-auto'>
             <h2 className='text-2xl text-blue'>{name}</h2>
             <h3 className='text-sm'>{author}</h3>            
             <Progressbar progress={progress}/>

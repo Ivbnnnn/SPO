@@ -28,7 +28,7 @@ export default function Header() {
           </Link>
         </div>
         <div className='bg-beige-2 w-screen flex justify-between border-b border-accent-1'>          
-          <div className='relative w-full max-w-lg my-6'>
+          <div className='relative w-full max-w-lg my-6' >
               <div className="absolute inset-y-0 left-0 pl-8 flex items-center text-accent-1  pointer-events-none z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -38,7 +38,7 @@ export default function Header() {
               className='absolute inset-y-0 w-full pl-10 pr-3 m-5 rounded-3xl bg-beige-1 focus:outline-none focus:ring-2 focus:ring-accent-1'/>           
           </div>
 
-          <div className='flex gap-10 text-gray'>
+          <div className='flex p-10 m-4 gap-10 text-gray '>
             {/* колокольчик */}
             <button className='hover:cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">

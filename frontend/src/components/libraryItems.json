@@ -1,5 +1,6 @@
 {
     "1":{
+        "src":"images/prince.jpg",
         "name":"Маленький принц",
         "author":"Антуан де Сент-Экзюпери",
         "progress":70,
@@ -8,6 +9,7 @@
         "page":81
     },
     "2":{
+        "src":"images/prince.jpg",
         "name":"Маленький принц",
         "author":"Антуан де Сент-Экзюпери",
         "progress":70,
@@ -16,6 +18,7 @@
         "page":81
     },
     "3":{
+        "src":"images/prince.jpg",
         "name":"Маленький принц",
         "author":"Антуан де Сент-Экзюпери",
         "progress":70,
@@ -24,6 +27,7 @@
         "page":81
     },
     "4":{
+        "src":"images/prince.jpg",
         "name":"Маленький принц",
         "author":"Антуан де Сент-Экзюпери",
         "progress":70,
@@ -32,6 +36,7 @@
         "page":81
     },
     "5":{
+        "src":"images/prince.jpg",
         "name":"Маленький принц",
         "author":"Антуан де Сент-Экзюпери",
         "progress":70,

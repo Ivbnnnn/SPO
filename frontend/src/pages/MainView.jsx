@@ -1,12 +1,12 @@
 import React from 'react'
-import ContinueCard from '../components/ContinueCard.jsx'
-import Card from '../components/Card.jsx'
-import Note from '../components/Note.jsx'
+import ContinueCard from '../components/mainComps/ContinueCard.jsx'
+import Card from '../components/mainComps/Card.jsx'
+import Note from '../components/mainComps/Note.jsx'
 import itemsContinue from "../components/continueItems.json"
 import itemsDiscuss from "../components/discussItems.json"
 import notesList from "../components/notes.json"
-import Header from '../components/Header.jsx'
-import NavAside from '../components/NavAside.jsx'
+import Header from '../components/mainComps/Header.jsx'
+import NavAside from '../components/mainComps/NavAside.jsx'
 import { Link } from 'react-router-dom'
 export default function MainView() {
     const discuss = Object.entries(itemsDiscuss)
@@ -29,7 +29,7 @@ export default function MainView() {
             <div className='flex-col justify-between my-6'>
                 <div className='flex justify-between'><h1 className='text-2xl'>Ваши сессии</h1>
                 <Link to='/'><h3 className='text-accent-1 text-lg mr-8'>Смотреть все</h3></Link></div>
-                <div>
+                <div className='grid grid-cols-2 gap-10'>
                 {discuss.map(([key, values])=>(<Card key={key} {...values}/>))}
                 </div>
             </div>
@@ -54,12 +54,7 @@ export default function MainView() {
                         </div>
                 </div>
             </div>
-            <div className='flex flex-col m-4 p-4  border border-main-3 rounded-lg bg-main-3 h-fit'>
-            <h3 className=''>Ваша активность</h3>
-            <h2 className='flex justify-end'>
-                <Link to='/'>Перейти</Link>
-            </h2>
-            </div>
+                
         </div>
         
     </div>
