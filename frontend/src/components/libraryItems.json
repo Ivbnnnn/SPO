@@ -1,0 +1,42 @@
+{
+    "1":{
+        "name":"Маленький принц",
+        "author":"Антуан де Сент-Экзюпери",
+        "progress":70,
+        "chapter":5,
+        "chapter_max":12,
+        "page":81
+    },
+    "2":{
+        "name":"Маленький принц",
+        "author":"Антуан де Сент-Экзюпери",
+        "progress":70,
+        "chapter":5,
+        "chapter_max":12,
+        "page":81
+    },
+    "3":{
+        "name":"Маленький принц",
+        "author":"Антуан де Сент-Экзюпери",
+        "progress":70,
+        "chapter":5,
+        "chapter_max":12,
+        "page":81
+    },
+    "4":{
+        "name":"Маленький принц",
+        "author":"Антуан де Сент-Экзюпери",
+        "progress":70,
+        "chapter":5,
+        "chapter_max":12,
+        "page":81
+    },
+    "5":{
+        "name":"Маленький принц",
+        "author":"Антуан де Сент-Экзюпери",
+        "progress":70,
+        "chapter":5,
+        "chapter_max":12,
+        "page":81
+    }
+}
