@@ -9,6 +9,10 @@
  - tailwind v4+
 # Строение проекта:
 comps/
+    sessionsComps/
+        sessionItem.jsx
+    profileComps/
+        profileCard.jsx
     libraryComps/
         LibraryBook.jsx
     mainComps/
@@ -25,6 +29,8 @@ comps/
     UI/
         Progressbar.jsx
 pages/
+    SessionsView.jsx
+    ProfileView.jsx
     LibraryView.jsx
     MainView.jsx
     ReaderView.jsx
@@ -34,6 +40,8 @@ routes:
     -/ (MainView.jsx)
     -/library (LibraryView.jsx)
     -/reader (ReaderView.jsx)
+    -/profile (ProfileView.jsx)
+    -/sessions (SessionsView.jsx)
 
 Работа с заметками происходит следующим образом:
 Парситься 2 файла notes.json phrazes.json, загружаются в loacalStorage "notes", "phrazes", далее работа с добавлением удалением идет с помощью localStorage, этап с файлами нужен на тестовом этапе, чтобы хоть какие-то начальные данные присутствовали.
@@ -42,4 +50,4 @@ routes:
 
 # Ограничения текущей архитектуры
 ## нет бекенда - в reader доступна лишь одна книга и способов загрузки новых книг не предусмотрено
-## страницы Главная, Сессии и Библиотека не содержат функционала
+## страницы Главная, Сессии, Профиль и Библиотека не содержат функционала

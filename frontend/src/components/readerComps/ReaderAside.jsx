@@ -73,7 +73,7 @@ export default function ReaderAside() {
         </div>
         <button 
             onClick={()=>{
-                openModal(1, "123")
+                openModal()
             }}
             
             className=' mx-4 relative bg-accent-1 text-beige-1 rounded-xl h-fit py-2 px-8 pl-10 cursor-pointer'>
@@ -87,6 +87,7 @@ export default function ReaderAside() {
             <ReaderModal
             onClose={closeModal}
             onAddNote={handleAddNote}
+            type={currentType}
                 />
         )}
     </div>

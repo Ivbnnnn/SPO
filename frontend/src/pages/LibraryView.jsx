@@ -5,14 +5,17 @@ import Header from '../components/mainComps/Header.jsx'
 import NavAside from '../components/mainComps/NavAside.jsx'
 import { Link } from 'react-router-dom'
 import LibraryBook from '../components/libraryComps/LibraryBook.jsx'
+import LibraryModal from "../components/libraryComps/LibraryModal.jsx"
+import { useState } from "react"
 export default function MainView() {
+    const [modalOpen, setModalOpen] = useState(false)
     const items = Object.entries(libraryItems)
   return (
     <>
     <Header/>
     <div className='flex'>
       <NavAside/>
-      <div className='bg-beige-1 flex flex-col
+      <div className='bg-beige-1 flex flex-col relative
         text-accent-2
         w-screen
         p-10'>
@@ -23,7 +26,10 @@ export default function MainView() {
                 <h2 className='text-blue text-3xl mb-4'>Моя библиотека</h2>
                 <h3 >Ваши книги для личного и совместного просмотра</h3>
             </div>
-            <button className=' relative bg-accent-1 text-beige-1 rounded-xl h-fit py-4 px-8 pl-10 cursor-pointer'>
+            {modalOpen && <LibraryModal state={modalOpen} setState={setModalOpen}/>}
+            <button className=' relative bg-accent-1 text-beige-1 rounded-xl h-fit py-4 px-8 pl-10 cursor-pointer'
+            onClick={()=>setModalOpen(!modalOpen)}
+            >
                 Добавить
                 <svg className='absolute  ml-2 left-3 top-1/2 -translate-y-1/2 w-5 h-5'
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
@@ -43,7 +49,7 @@ export default function MainView() {
                                 cursor-pointer"
                         >
                         <option value="date">Дате добавления</option>
-                        <option value="genre">Жанру</option>
+                        <option value="name">Названию</option>
                     </select>
                 </div>
                 <div className="grid grid-cols-4 gap-10">

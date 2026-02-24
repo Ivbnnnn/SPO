@@ -28,7 +28,7 @@ export default function MainView() {
             ))}
             <div className='flex-col justify-between my-6'>
                 <div className='flex justify-between'><h1 className='text-2xl'>Ваши сессии</h1>
-                <Link to='/'><h3 className='text-accent-1 text-lg mr-8'>Смотреть все</h3></Link></div>
+                <Link to='/sessions'><h3 className='text-accent-1 text-lg mr-8'>Смотреть все</h3></Link></div>
                 <div className='grid grid-cols-2 gap-10'>
                 {discuss.map(([key, values])=>(<Card key={key} {...values}/>))}
                 </div>
@@ -49,9 +49,9 @@ export default function MainView() {
                         </ul>
                     </div>
                 
-                    <div className='flex justify-end'>
+                    {/* <div className='flex justify-end'>
                         <Link to='/'>Перейти</Link>
-                        </div>
+                        </div> */}
                 </div>
             </div>
                 

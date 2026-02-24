@@ -1,5 +1,6 @@
 import React from 'react'
 import Progressbar from '../UI/Progressbar'
+import { Link } from 'react-router-dom'
 export default function ContinueCard({src, name, author, progress, chapter, chapter_max, page}) {
   return (
     <div className='flex rounded-2xl bg-beige-2 p-4'>
@@ -11,12 +12,14 @@ export default function ContinueCard({src, name, author, progress, chapter, chap
             <div className='my-4'>
                 Глава {chapter} из {chapter_max}, страница {page}
             </div>
-            <button className='bg-accent-1
-            text-beige-1
-            rounded-2xl 
-            px-8 py-2
-            hover:cursor-pointer'
-            >Продолжить чтение</button>
+            <Link to="/reader">
+              <button className='bg-accent-1
+              text-beige-1
+              rounded-2xl 
+              px-8 py-2
+              hover:cursor-pointer'
+              >Продолжить чтение</button>
+            </Link>
         </div>
     </div>
   )

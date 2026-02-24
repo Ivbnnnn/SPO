@@ -7,7 +7,7 @@ export default function NavAside() {
   return (
     <div className='
     max-w-[30vw] min-w-[15vw]
-    h-screen
+    min-h-screen
     
     flex flex-col bg-gray text-beige-1'>
         <ul className='flex flex-col gap-4 p-6'>

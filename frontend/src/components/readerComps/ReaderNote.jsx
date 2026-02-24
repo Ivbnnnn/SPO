@@ -8,7 +8,7 @@ export default function ReaderNote({page, text}) {
             </div>
         <div className='flex-1 flex break-words'>
             <div className='flex-grow basis-4/5 break-words'>{text}</div>
-            <div className='flex-none basis-1/5 text-accent-1 flex justify-end items-end gap-4'>
+            <div className='flex-none basis-1/5 text-accent-1 flex justify-end items-end gap-2'>
                 <button className='cursor-pointer'>
                 {/* edit */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">

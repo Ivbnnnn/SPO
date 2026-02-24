@@ -17,7 +17,7 @@ export default function SessionItem({src, name, progress, author, members, notes
                 {url}
             </div>
             <div className='flex my-8 justify-end'>
-              <Link to="reader">
+              <Link to="/reader">
               <button className='bg-accent-1    
               text-beige-1
               rounded-2xl

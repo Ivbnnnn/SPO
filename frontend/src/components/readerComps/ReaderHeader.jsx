@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import ReaderHeaderModal from './ReaderHeaderModal'
 export default function ReaderHeader() {
+  const [modalOpen, setModalOpen] = useState(false)
   return (
     <div className='flex text-accent-2'>
         <div className='min-w-[15vw] flex justify-center bg-gray items-center hover:active'>
@@ -32,7 +34,7 @@ export default function ReaderHeader() {
               <h2>Мастер и Маргарита</h2>         
           </div>
 
-          <div className='flex gap-10 text-gray'>
+          <div className='flex p-4 m-10 mr-0 gap-4 text-gray border-l border-t border-b rounded-2xl  rounded-tr-none rounded-br-none border-accent-1'>
             {/* колокольчик */}
             <button className='hover:cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
@@ -40,12 +42,20 @@ export default function ReaderHeader() {
               </svg>
               
             </button>
-
-            <button className='hover:cursor-pointer'>
-              {/* иконка */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
+            <Link to="/profile">
+              <button className='hover:cursor-pointer'>
+                {/* иконка */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="8" cy="8" r="8"/>
+                </svg>
+              </button>
+            </Link>
+            <button className='hover:cursor-pointer text-accent-1' onClick={()=>{setModalOpen(!modalOpen)}}>
+              {/* 3dot */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
               </svg>
+              {modalOpen && <ReaderHeaderModal/>}
             </button>
           </div>
         </div>

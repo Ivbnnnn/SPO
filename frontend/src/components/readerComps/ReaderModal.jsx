@@ -1,6 +1,6 @@
 // ReaderModal.jsx
 import { useState } from "react"
-export default function ReaderModal({ onClose, onAddNote }) {
+export default function ReaderModal({ onClose, onAddNote, type }) {
   const [page, setPage] = useState('')
   const [text, setText] = useState('')
 
@@ -22,7 +22,7 @@ export default function ReaderModal({ onClose, onAddNote }) {
         />
         <input
           type="text"
-          placeholder="Введите заметку"
+          placeholder={`Введите ${type === "note" ? "заметку" :"цитату"}`}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />

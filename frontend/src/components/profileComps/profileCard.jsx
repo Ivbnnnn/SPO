@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function ProfileCard() {
+  const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [enabledToEdit, setEnabled] = useState(false)
   return (
     <div className='flex w-full bg-beige-2 rounded-2xl p-4 m-2'>
         <div>
@@ -9,12 +13,17 @@ export default function ProfileCard() {
               </svg>
         </div>
         <div className='mx-10 min-w-[20vw] m-auto'>
-            <div className='text-2xl m-2'>Гольскун Иван</div>
-            <div className='border border-accent-1 rounded-2xl bg-beige-1 py-2 px-4 m-2'>ilya.golkyn@gmail.com</div>
+            <div className='text-2xl m-2 flex text-blue '>
+              <input onChange={(e)=>{setName(e.target.value) }} type="text" disabled={!enabledToEdit} value={name} placeholder='Фамилия' className={` ${enabledToEdit ? "border border-accent-1" : "cursor-not-allowed"}  min-w-[10vw] rounded-2xl border p-2 mr-4`}/>
+              <input onChange={(e)=>{setLastName(e.target.value) }} type="text" disabled={!enabledToEdit} value={lastName} placeholder='Имя' className={` ${enabledToEdit ? "border border-accent-1" : "cursor-not-allowed"}  min-w-[10vw] rounded-2xl border p-2 mr-4`}/>
+            </div>
+            <div className='m-2'>
+              <input onChange={(e)=>{setEmail(e.target.value) }} type="email" disabled={!enabledToEdit} value={email} placeholder='email' className={` ${enabledToEdit ? "border border-accent-1" : "cursor-not-allowed"}  min-w-[10vw] rounded-2xl border p-2 mr-4`}/>
+              </div>
         </div>
         <div className='flex items-start justify-end w-full'>
-          <button
-            className='bg-beige-1 rounded-2xl px-4 py-2 text-gray-400'
+          <button onClick={ ()=>{ setEnabled(!enabledToEdit)}}
+            className= {` ${enabledToEdit ? "border border-accent-1" : null}   cursor-pointer bg-beige-1 rounded-2xl px-4 py-2 text-blue`}
           >Редактировать</button>
         </div>
     </div>
